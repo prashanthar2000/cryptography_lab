@@ -10,7 +10,7 @@ $./task1
 $./task1
 $./task1
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/seed_time.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/seed_time.png" width=1000 >
 #### observations 
 - based on the value of srand(that is seed value ) pseudo random number is generated 
 - 2 random number generated at a same time will generate same number which is a wrong way to generate a truly random number 
@@ -18,7 +18,7 @@ $./task1
 ###### step 2 
 > comment the srand(time(NULL))   and excecute the same command of step one 
 
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/no_seed.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/no_seed.png" width=1000 >
 
 #### observations 
 - on commenting the srand(time(NULL)) the generated number will always be same
@@ -48,7 +48,7 @@ $ ./task2
 ```sh 
 $ python decrypt.py
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/decrypt.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/decrypt.png" width=1000 >
 
 #### observations 
 - we see that giving time as the seed value is not a truly random value 
@@ -59,7 +59,7 @@ $ python decrypt.py
 ```sh 
 $ watch -n .1 cat /proc/sys/kernel/random/entropy_avail
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/entropy_avail.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/entropy_avail.png" width=1000 >
 - the value keeps increasing on pressing any key or moving mouse 
 
 ### Task 4: Get Pseudo Random Numbers from /dev/random
@@ -70,7 +70,7 @@ $ cat /dev/random | hexdump
 - entropy_avail value changes continoulsy from 0 to 60-70 (as fas as i could see )
 - cat /dev/random prints random numbers only when there is enough entropy  
 
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/random.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/random.png" width=1000 >
 
 
 ### Task 5: Get Pseudo Random Numbers from /dev/urandom
@@ -79,7 +79,7 @@ $ cat /dev/random | hexdump
 $ watch -n .1 cat /proc/sys/kernel/random/entropy_avail
 $ cat /dev/urandom | hexdump
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/urandom.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/urandom.png" width=1000 >
 
 
 - Both /dev/random and /dev/urandom use the random data from the pool to generate pseudo random numbers.
@@ -104,7 +104,7 @@ Monte Carlo value for Pi is 3.140957416 (error 0.02 percent).
 Serial correlation coefficient is 0.000720 (totally uncorrelated = 0.0).
 
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/output.bin.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/output.bin.png" width=1000 >
 
 - entropy = 7.999.... bits per bytes indicate that the file is extremely dense in information—essentially random. Hence, compression of the file is unlikely to reduce its size.
 - as it is random compression is not possible ie 0% compression on the file 
@@ -122,7 +122,7 @@ $ gcc task5.c -o task5
 $ ./task5
 $ ./task5
 ```
-![](https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/trulyrandom.png)
+<img src="https://github.com/prashanthar2000/cryptography_lab/raw/master/1lab/trulyrandom.png" width=1000 >
 
 - the values are truly random numbers 
 - values are read from /dev/urandom therefore they are truly random numbers
